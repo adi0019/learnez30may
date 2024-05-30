@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="#F3EFEF"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="#F3EFEF"
+        android:layout_height="match_parent">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/topic_genertator_cardview"
+            app:strokeColor="@color/purple_500"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/card_view_corner"
+            android:layout_marginEnd="10dp"
+            app:cardCornerRadius="8dp"
+
+
+            app:cardElevation="8dp">
+            <androidx.appcompat.widget.AppCompatTextView
+                android:textSize="16sp"
+
+
+                android:textColor="#0B5D9E"
+                android:gravity="center"
+                android:id="@+id/topic_genertator_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:text="Tap to get Topic for Practice"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"/>
+        </androidx.cardview.widget.CardView>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/topic_genertator_cardview">
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textContainer"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:hint="tap on mic icon or write response here.."
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+
+               >
+                <EditText
+
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:gravity="start|top"
+                    android:id="@+id/textInput"
+                    android:background="@drawable/corners_shape"
+                    android:scrollbars="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollHorizontally="false"
+                    android:layout_alignParentTop="true"
+                    android:inputType="textMultiLine"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_alignParentEnd="true"
+                    android:autofillHints=""
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="4dp"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="4000"
+                    app:helperText="Required"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <Button
+                android:id="@+id/clear_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:background="#3F51B5"
+                android:layout_gravity="end"
+                android:textStyle="normal"
+
+                android:layout_margin="15dp"
+                android:textSize="12dp"
+
+                android:textColor="@color/white"
+                android:text="Clear Input"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_gravity="center"
+                android:id="@+id/idIVMic"
+                android:padding="4dp"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_mic_black_off"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:textSize="16sp"
+                android:textColor="@color/purple_700"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="Say something"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:textSize="18dp"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:id="@+id/response_check_btn"
+                android:background="#3F51B5"
+
+                android:padding="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Check Response"/>
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:orientation="horizontal">
+
+                <!-- TextView with CardView for Accuracy -->
+                <androidx.cardview.widget.CardView
+
+                    android:background="@drawable/card_view_corner"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="8dp"
+
+                    android:elevation="8dp"
+                    android:radius="16dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/textViewAccuracy"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:gravity="center"
+                            android:textSize="24sp"
+                            android:padding="4dp"
+                            android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/textViewAccuracyv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Accuracy"
+                        android:textSize="16sp"
+                        android:padding="6dp"
+                        android:gravity="center"
+                        android:textColor="#0B5D9E" />
+            </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- TextView with CardView for Spelling Errors -->
+                <androidx.cardview.widget.CardView
+                    android:background="@drawable/card_view_corner"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="8dp"
+                    android:elevation="2dp"
+                    android:radius="16dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/textViewSpellingErrors"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:gravity="center"
+                            app:cardCornerRadius="8dp"
+                            android:textSize="24sp"
+                            android:padding="4dp"
+                            android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/textViewSpellingErrorsv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Spelling Errors"
+                        app:cardCornerRadius="8dp"
+                        android:padding="4dp"
+                        android:textSize="16sp"
+                        android:gravity="center"
+
+                        android:textColor="#0B5D9E" />
+            </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- TextView with CardView for Grammar Errors -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    app:cardCornerRadius="8dp"
+
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="10dp"
+                    android:background="@color/gray"
+                    android:elevation="2dp"
+                    android:radius="16dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/textViewGrammarErrors"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:gravity="center"
+                            android:textSize="24sp"
+                            android:padding="4dp"
+                            android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/textViewGrammarErrorsv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Grammar Errors"
+                        android:textSize="16sp"
+                        android:padding="2dp"
+                        android:gravity="center"
+
+                        android:textColor="#0B5D9E" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="8dp"
+                    android:background="@color/gray"
+                    android:elevation="2dp"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView_grammerv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#0B5D9E"
+                        android:text="Grammer Errors: "
+                        android:textSize="16sp"
+                        android:padding="8dp"
+                         />
+                    <TextView
+                        android:id="@+id/textView_grammer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="16sp"
+                        android:padding="8dp"
+                        android:textColor="@android:color/black" />
+            </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- TextView with CardView for Errors -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="8dp"
+                    android:background="@color/gray"
+                    android:elevation="2dp"
+                    android:radius="16dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textViewErrorsv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Spelling Error: "
+
+                        android:textSize="16sp"
+                        android:padding="8dp"
+                        android:textColor="#0B5D9E" />
+                        <TextView
+                            android:id="@+id/textViewErrors"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textSize="16sp"
+                            android:padding="8dp"
+                            android:textColor="@android:color/black" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- TextView with CardView for Additional Suggestions -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    app:cardCornerRadius="8dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@color/gray"
+                    >
+
+                    <TextView
+                        android:id="@+id/textViewAdditionalSuggestions"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Your Personalized Recommendations"
+                        android:textSize="16sp"
+                        android:textColor="#0B5D9E"
+                        android:padding="8dp"
+                        android:gravity="left"
+                         />
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/suggestion_recylcer_view"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

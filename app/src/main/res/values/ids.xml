@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="callerIdTextView" type="id" />
+    <item name="acceptButton" type="id" />
+    <item name="rejectButton" type="id" />
+</resources>

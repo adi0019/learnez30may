@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.AppCompatTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textColor="@color/black"
+    android:layout_gravity="end"
+    android:id="@+id/MessageTextView"
+    android:background="@drawable/incoming_message_background_blue"
+    android:padding="16dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="15dp"
+    android:text="hi"/>

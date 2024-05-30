@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_marginLeft="15dp"
+    android:layout_height="wrap_content">
+<androidx.appcompat.widget.AppCompatTextView
+    android:textColor="@color/black"
+    android:layout_gravity="start"
+    android:id="@+id/MessageTextView"
+    android:background="@drawable/incoming_message_background"
+    android:padding="16dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_marginStart="10dp"
+    android:text="hi"/>
+</RelativeLayout>

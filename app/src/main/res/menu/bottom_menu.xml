@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:icon="@drawable/friends_svgrepo_com"
+        android:id="@+id/navigation_home"
+        android:title="Friends"/>
+    <item
+        android:icon="@drawable/friend_search_svgrepo_com"
+        android:id="@+id/navigation_dashboard"
+        android:title="Find Friends"/>
+    <item
+        android:icon="@drawable/ic_notifications_black_24dp"
+        android:id="@+id/navigation_notifications"
+        android:title="Notifications"/>
+    <item
+        android:icon="@drawable/account_customize_man_svgrepo_com__1_"
+        android:id="@+id/navigation_profile"
+        android:title="Profile"/>
+</menu>

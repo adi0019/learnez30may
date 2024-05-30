@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:id="@+id/msg"
+    android:background="@color/white"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="2dp"
+    app:cardCornerRadius="20dp">
+    <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+        android:layout_gravity="center"
+        android:id="@+id/profilecardview"
+        android:background="@color/black"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginEnd="16dp"
+        app:cardCornerRadius="50dp"
+        app:cardElevation="4dp">
+        <ImageView
+            android:id="@+id/profile"
+            android:background="@drawable/circle_border"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/account_customize_man_svgrepo_com__1_"
+            android:scaleType="centerCrop"
+            app:layout_constraintCircleRadius="20dp"/>
+    </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+    <TextView
+        android:textSize="25dp"
+        android:textColor="@android:color/black"
+        android:gravity="center_vertical"
+        android:id="@+id/name_notification1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:text="User Name"
+        android:layout_weight="3"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"/>
+    <TextView
+        android:id="@+id/liveStatusTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="status"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@color/purple_700" />
+    <ImageView
+        android:id="@+id/accept_btn"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:src="@drawable/baseline_call_24"
+        android:scaleType="centerInside"/>
+</LinearLayout>

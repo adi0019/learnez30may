@@ -1,0 +1,47 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="200dp"
+        android:layout_height="180dp"
+        android:layout_margin="3dp"
+        card_view:cardCornerRadius="16dp"> <!-- Set corner radius to 16dp -->
+
+        <!-- FrameLayout as parent container -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- ImageView to display video thumbnail -->
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/video_thumbnail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop">
+            </androidx.appcompat.widget.AppCompatImageView>
+
+            <!-- LinearLayout at the bottom -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="bottom"
+                android:background="#80000000"> <!-- Background color for transparency -->
+
+                <!-- TextView to display video title -->
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/video_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:textSize="12sp"
+                    android:textColor="@android:color/white"/> <!-- Text color for better visibility -->
+            </LinearLayout>
+
+        </FrameLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

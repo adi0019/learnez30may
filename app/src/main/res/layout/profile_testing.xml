@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#F6F3ED"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity">
+
+
+    <!-- Circular Profile Image at the top -->
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/background_profile_view"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/profile_image"
+        app:civ_border_width="2dp"
+        app:civ_border_color="#FF000000"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="10dp" />
+
+    <!-- Name TextView below image -->
+    <TextView
+        android:id="@+id/profile_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="John Doe"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@+id/background_profile_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Buttons aligned horizontally -->
+    <LinearLayout
+        android:id="@+id/button_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/profile_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/Add_Friend"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="16dp"
+            android:background="@color/green"
+            android:padding="5dp"
+            android:text="Add Friend Request"
+            android:textAllCaps="false"
+            android:textColor="#FFFCFC"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/decline_friend_request"
+            android:layout_width="0dp"
+            app:cardCornerRadius="16dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            android:background="@color/green"
+            android:padding="5dp"
+            android:text="Cancel Friend Request"
+            android:textAllCaps="false"
+            android:textColor="#FFFCFC"
+            android:textSize="16sp"
+            android:visibility="gone" />
+    </LinearLayout>
+    <!-- CardView for Personal Information -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_personal_info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/button_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/title_personal_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Personal Information"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/label_occupation_profile"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Occupation"
+
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/occupation_profile"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Occupation Text"
+                    android:textColor="#000000"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/label_profile_city"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="City"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/profile_city"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="City Text"
+                    android:textColor="#000000"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/label_country_profile"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Country"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/country_profile"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Country Text"
+                    android:textColor="#000000"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- CardView for Language Information -->
+    <!-- CardView for Language Information -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_language_info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/card_view_personal_info"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/title_language_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Language Information"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- Native Language -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/label_native_lang_profile"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Native Language"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/native_lang_profile"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="English"
+                    android:textColor="#000000"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+
+            <!-- Learning Language -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/label_learning"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Learning"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/learning"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="French"
+                    android:textColor="#000000"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <!-- CardView for Bio -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_bio"
+        android:layout_width="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/card_view_language_info"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/title_bio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bio"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:id="@+id/bio_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:maxLines="2"
+                android:text="Bio Text"
+                android:textColor="#000000"
+                android:textSize="18sp"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <!-- CardView for Personal Information -->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
